@@ -4,6 +4,23 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>404</title>
+        <style>
+            @keyframes slideUp {
+                from {transform: translateY(1000px);}
+            }
+            
+            @keyframes slideLeft {
+                from {transform: translateX(1000px);}
+            }
+            h1 {
+                animation: slideUp;
+                animation-duration: 3s;
+            }
+            img {
+                animation: slideLeft;
+                animation-duration: 5s;
+            }
+        </style>
     </head>
     <body style="background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);">
         <div><h1>I think you mistyped the url. We couldn't find it so lets just blame it on you</h1></div>
