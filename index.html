@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <title>Animation</title>
+        <title>Animation - Hecker625</title>
         <style>
             body {
                 min-height: 100vh;
@@ -21,47 +21,57 @@
                 background: linear-gradient(to right, #00ff00, #0000ff);
                 border-radius: 100px;
                 display: flex;
-                animation: rotate, slideRight;
+                animation: rotate, slideRight, fade;
                 animation-duration: 5s;
-                animation-direction: alternate;
-                animation-timing-function: linear;
-                animation-iteration-count: infinite;
-                /* opacity: 0; */
-            }
-            #box:hover {
-                animation-play-state: paused, paused,running;
-                animation-name: rotate, slideRight, glow, fade;
-                animation-duration: 5s, 5s, 5s, 5s, 5s;
                 animation-direction: alternate;
                 animation-timing-function: linear;
                 animation-iteration-count: infinite;
                 opacity: 0;
             }
+            #box:hover {
+                animation-play-state: paused, paused,running;
+                animation-name: rotate, slideRight, glow;
+                animation-duration: 5s, 5s, 5s, 5s;
+                animation-direction: alternate;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+            }
+            @keyframes slideLeft {
+                from {transform: translateX(1000px);}
+            }
+            
             @keyframes slideRight {
                 to {transform: translateX(1050px);}
             }
-            
+            @keyframes slideUp {
+                from {transform: translateY(1000px);}
+            }
+            @keyframes slideDown {
+                to {transform: translateY(1000px);}
+            }
             @keyframes rotate {
                 50% {transform: rotateZ(180deg);}
             }
-
+            @keyframes grow {
+                50% {transform: scale(5,5);}
+            }
+            @keyframes shrink {
+                50% {transform: scale(0.5,0.5);}
+            }
+            @keyframes fade{
+                50% {opacity: 1;}
+            }
             @keyframes colorChange {
                 50% {background-color: blue;}
             }
-            
             @keyframes glow {
                 50% {box-shadow: 0px 0px 50px #f2ff00;}
-            }
-
-            @keyframes fade{
-                50% {opacity: 1;}
             }
         </style>
     </head>
     <body style="background-color: black;">
         <div>
             <div id="box">Hover me to Pause!</div>
-              
         </div>
     </body>
 </html>
