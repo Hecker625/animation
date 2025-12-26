@@ -21,7 +21,8 @@
                 background: linear-gradient(to right, #00ff00, #0000ff);
                 border-radius: 100px;
                 display: flex;
-                animation: rotate, slideRight, fade;
+                animation: rotate, slideRight, glow, fade;
+                animation-play-state: running, running, paused, running;
                 animation-duration: 5s;
                 animation-direction: alternate;
                 animation-timing-function: linear;
@@ -29,8 +30,8 @@
                 opacity: 0;
             }
             #box:hover {
-                animation-play-state: paused, paused,running;
-                animation-name: rotate, slideRight, glow;
+                animation-name: rotate, slideRight, glow, fade;
+                animation-play-state: paused, paused,running, paused;
                 animation-duration: 5s, 5s, 5s, 5s;
                 animation-direction: alternate;
                 animation-timing-function: linear;
@@ -39,7 +40,6 @@
             @keyframes slideLeft {
                 from {transform: translateX(1000px);}
             }
-            
             @keyframes slideRight {
                 to {transform: translateX(1050px);}
             }
@@ -72,6 +72,7 @@
     <body style="background-color: black;">
         <div>
             <div id="box">Hover me to Pause!</div>
+              
         </div>
     </body>
 </html>
