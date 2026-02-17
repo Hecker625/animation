@@ -1,2 +1,2 @@
 A simple css animation of a glowing bar.
-https://hecker625.github.io
+[https://glowing-bar.onrender.com](https://glowing-bar.onrender.com/)
